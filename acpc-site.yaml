@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: acpc-site
+  name: acpc-site
+  namespace: acpc-pc2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acpc-site
+  template:
+    metadata:
+      labels:
+        app: acpc-site
+    spec:
+      containers:
+      - image: wordpress
+        name: wordpress
+        ports:
+        - name: pc2wtiport
+          containerPort: 80
+        env:
+                - name: WORDPRESS_DB_HOST
+                  value: "172.20.39.174"
+                - name: WORDPRESS_DB_USER
+                  value: "newacpc"
+                - name: WORDPRESS_DB_PASSWORD
+                  value: "newacpc"
+                - name: WORDPRESS_DB_NAME
+                  value: "newacpc"
+         volumeMounts:
+                - mountPath: /var/www/html/wp-content
+                  name: wp-content        
+         volumes:
+       - name: wp-content
+         hostPath:
+          path: /k8s/acpc-site-wp-content
