@@ -1,7 +1,7 @@
 # About 
 ACPC Online websites such as points.acpc, and www.acpc.global
 
- * acpc-site.yaml file
+# acpc-site.yaml file
   * A yaml file creates ACPC.GLOBAL pod website on any ready kubernetes cluster. The pod mounts an external host storage to /var/www/html/wp-content. The pod listen for port 80/tcp.
   * Usage:
      * In spec container template, in env:
