@@ -12,3 +12,5 @@ ACPC Online websites such as points.acpc, and www.acpc.global
      * git clone https://github.com/acpc-system/acpc-onlinewebapps.git
      * cd  acpc-onlinewebapps
      * kubectl create -f acpc-site.yaml
+  * To do:
+   * Change WORDPRESS_DB_USER, and WORDPRESS_DB_PASSWORD to a kubernetes secret object.
