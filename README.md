@@ -22,6 +22,6 @@ ACPC Online websites such as points.acpc, and www.acpc.global
   * Creates an ingress rule to publish website points.acpc.global
   * Usage:
     * Change the pathes to match your setup
-  * git clone https://github.com/acpc-system/acpc-onlinewebapps.git
-  * cd acpc-onlinewebapps
-  * kubectl create -f acpc-points.yaml
+    * git clone https://github.com/acpc-system/acpc-onlinewebapps.git
+    * cd acpc-onlinewebapps
+    * kubectl create -f acpc-points.yaml
