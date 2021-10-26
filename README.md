@@ -14,3 +14,5 @@ ACPC Online websites such as points.acpc, and www.acpc.global
      * kubectl create -f acpc-site.yaml
   * To do:
      * Change WORDPRESS_DB_USER, and WORDPRESS_DB_PASSWORD to a kubernetes secrets object.
+     * Adding a cluster IP service to expose this pod
+     * Adding an ingress rule to publish the pod through nginx ingress load balancer.
